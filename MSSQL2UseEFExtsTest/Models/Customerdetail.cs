@@ -41,7 +41,7 @@ namespace MSSQL2UseEFExtsTest.Models
 		public string email {get; set;}
 
 
-		public string marry {get; set;}
+		public bool marry {get; set;}
 
 
 		public long familyNum {get; set;}

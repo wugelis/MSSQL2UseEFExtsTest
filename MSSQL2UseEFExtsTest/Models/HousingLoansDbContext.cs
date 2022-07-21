@@ -19,6 +19,12 @@ namespace MSSQL2UseEFExtsTest.Models
             base.OnConfiguring(optionsBuilder);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Housingloansdata>()
+                .HasKey(o => new { o.customerId, o.loansId });
+        }
+
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Customerdetail> Customerdetails { get; set; }
         public DbSet<Housingloansdata> Housingloansdatas { get; set; }
